@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/component";
+
+package dominatione.component;
+
+enum SeedKind {
+  SEED_KIND_EMPTY = 0;
+  SEED_KIND_OAK_TREE = 1;
+  SEED_KIND_PINE_TREE = 2;
+  SEED_KIND_WHEAT = 3;
+  SEED_KIND_CANNABIS = 4;
+  SEED_KIND_CORN = 5;
+}
+
+message Seed {
+  SeedKind kind = 1;
+  float maturity = 2;
+}

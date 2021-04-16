@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/blockchain";
+
+package dominatione.blockchain;
+
+message EventCreatePlayer {
+  bytes public_key = 1;
+  string name = 2;
+}

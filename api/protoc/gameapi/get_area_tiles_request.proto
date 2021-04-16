@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/gameapi";
+
+package dominatione.gameapi;
+
+message GetAreaTilesRequest {
+  uint64 entity = 1;
+  uint32 left = 2;
+  uint32 top = 3;
+  uint32 right = 4;
+  uint32 bottom = 5;
+}

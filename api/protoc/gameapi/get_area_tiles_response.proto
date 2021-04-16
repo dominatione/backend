@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/gameapi";
+
+package dominatione.gameapi;
+
+import "api/protoc/component/area_tile.proto";
+
+message GetAreaTilesResponse {
+  uint64 tiles_count = 1;
+  repeated component.AreaTile tiles = 2;
+}

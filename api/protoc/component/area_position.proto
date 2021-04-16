@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/component";
+
+package dominatione.component;
+
+enum AreaPositionLayer {
+  AREA_POSITION_LAYER_EMPTY = 0;
+  AREA_POSITION_LAYER_SURFACE = 1;
+  AREA_POSITION_LAYER_PLAYER = 2;
+}
+
+message AreaPosition {
+  uint64 entity = 1;
+  AreaPositionLayer layer = 2;
+  uint32 x = 3;
+  uint32 y = 4;
+  uint32 width = 5;
+  uint32 height = 6;
+}

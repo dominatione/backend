@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/gameapi";
+
+package dominatione.gameapi;
+
+import "api/protoc/entity/planet.proto";
+
+message GetPlanetResponse {
+  entity.Planet planet = 1;
+}

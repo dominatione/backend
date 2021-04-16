@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/gameapi";
+
+package dominatione.gameapi;
+
+message QueryParamPossession {
+  uint64 owner_entity = 1;
+}

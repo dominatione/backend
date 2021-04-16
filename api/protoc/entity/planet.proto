@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/entity";
+
+package dominatione.entity;
+
+import "api/protoc/component/planet.proto";
+import "api/protoc/component/area.proto";
+
+message Planet {
+  uint64 entity = 1;
+  component.Planet planet = 2;
+  component.Area area = 3;
+}

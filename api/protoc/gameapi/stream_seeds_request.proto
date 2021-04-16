@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/gameapi";
+
+package dominatione.gameapi;
+
+import "api/protoc/gameapi/query_param_possession.proto";
+import "api/protoc/gameapi/query_param_area_position.proto";
+
+message GetSeedsRequest {
+  message QueryParams {
+    QueryParamAreaPosition area_position = 1;
+    QueryParamPossession owner = 2;
+  }
+  QueryParams query_params = 1;
+}

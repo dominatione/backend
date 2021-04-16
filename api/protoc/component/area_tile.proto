@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/component";
+
+package dominatione.component;
+
+enum AreaTileKind {
+  AREA_TILE_EMPTY = 0;
+  AREA_TILE_WATER = 1;
+  AREA_TILE_SHALLOW_WATER = 2;
+  AREA_TILE_SAND = 3;
+  AREA_TILE_GROUND = 4;
+  AREA_TILE_FERTILE_GROUND = 5;
+  AREA_TILE_GRAVEL = 6;
+  AREA_TILE_LAVA = 7;
+  AREA_TILE_STONE = 8;
+  AREA_TILE_SNOW = 9;
+}
+
+message AreaTile {
+  uint64 owner_entity = 1;
+  AreaTileKind kind = 2;
+}

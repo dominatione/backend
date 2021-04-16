@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/gameapi";
+
+package dominatione.gameapi;
+
+import "api/protoc/gameapi/create_planet_request_message.proto";
+import "api/protoc/gameapi/create_planet_response_message.proto";
+import "api/protoc/gameapi/get_planet_request.proto";
+import "api/protoc/gameapi/get_planet_response.proto";
+import "api/protoc/gameapi/get_planets_request.proto";
+import "api/protoc/gameapi/get_planets_response.proto";
+import "api/protoc/gameapi/get_area_tiles_request.proto";
+import "api/protoc/gameapi/get_area_tiles_response.proto";
+import "api/protoc/gameapi/get_seeds_request.proto";
+import "api/protoc/gameapi/get_seeds_response.proto";
+
+service Api {
+  rpc GetPlanet (GetPlanetRequest) returns (GetPlanetResponse);
+  rpc GetPlanets (GetPlanetsRequest) returns (GetPlanetsResponse);
+  rpc GetSeeds (GetSeedsRequest) returns (GetSeedsResponse);
+  rpc GetAreaTiles (GetAreaTilesRequest) returns (GetAreaTilesResponse);
+  rpc CreatePlanet (CreatePlanetRequest) returns (CreatePlanetResponse);
+}

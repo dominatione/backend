@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/blockchain";
+
+package dominatione.blockchain;
+
+import "api/protoc/blockchain/event_create_planet.proto";
+import "api/protoc/blockchain/event_create_player.proto";
+
+message Event {
+  message Body {
+    oneof event {
+      EventCreatePlanet create_planet = 1;
+      EventCreatePlayer create_player = 2;
+    }
+  }
+  Body body = 1;
+  uint64 timestamp = 2;
+  bytes signature = 3;
+}

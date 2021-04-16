@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package = "github.com/dominati-one/backend/pkg/protocol/entity";
+
+package dominatione.entity;
+
+import "api/protoc/component/seed.proto";
+import "api/protoc/component/area_position.proto";
+import "api/protoc/component/possession.proto";
+
+message Seed {
+  uint64 entity = 1;
+  component.Seed seed = 2;
+  component.AreaPosition area_position = 3;
+  component.Possession possession = 4;
+
+}
